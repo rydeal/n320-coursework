@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Ryan Deal
+        NEWMN 320
+        26.9.2019
+    -->
+    <!--Line 57 to 62 would have been the style for making the card go left, but I wasn't really able to figure it out. I thought maybe I could have tried an eventlistener in app.js and had two separate components that were pretty much the same, but it didn't work. Even though I am not finished, I will submit it and will learn how to do this correctly and learn from it.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 5</title>
+    <style>
+        body {
+            background: #000;
+        }
+        .student {
+            border-radius: 4px;
+            width: 100px;
+            height: 100px;
+            padding: 3px;
+            background-color: #eee;
+            color: #ef4b4b;
+        }
+        .arrow {
+            cursor: pointer;
+            color: #fff;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            background: #7ecfc0;
+            float: left;
+
+        }
+
+        .leftArrow {
+            cursor: pointer;
+            color: #fff;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            background: #7ecfc0;
+            float: left;
+
+        }
+        .cardActive {
+            transition: transform .3s ease, opacity .3s ease;
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+
+        .cardOut {
+            transition: transform .3s ease, opacity .3s ease;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+
+        .cardLeft {
+            transition: transform .3s ease, opacity .3s ease;
+            transform: rotate(-45deg);
+            opacity: 1;
+        }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <student-card v-bind:student="currentStudent" v-bind:isactive="cardActive"></student-card>
+        <!--v-on:click="leftArrow" goes on line 69-->
+        <div class="leftArrow"> < </div>
+        <div class="arrow" v-on:click="arrowClicked"> > </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+
+</html>
