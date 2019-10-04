@@ -6,7 +6,6 @@
         NEWMN 320
         26.9.2019
     -->
-    <!--Line 57 to 62 would have been the style for making the card go left, but I wasn't really able to figure it out. I thought maybe I could have tried an eventlistener in app.js and had two separate components that were pretty much the same, but it didn't work. Even though I am not finished, I will submit it and will learn how to do this correctly and learn from it.-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,7 +22,27 @@
             background-color: #eee;
             color: #ef4b4b;
         }
+        .school {
+            border-radius: 4px;
+            width: 150px;
+            height: 150px;
+            padding: 3px;
+            background-color: #eee;
+            color: #ef4b4b;
+        }
         .arrow {
+            cursor: pointer;
+            color: #fff;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            background: #7ecfc0;
+            float: left;
+
+        }
+        .schoolArrow {
             cursor: pointer;
             color: #fff;
             width: 15px;
@@ -48,6 +67,18 @@
             float: left;
 
         }
+        .schoolLeftArrow {
+            cursor: pointer;
+            color: #fff;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            background: #7ecfc0;
+            float: left;
+
+        }
         .cardActive {
             transition: transform .3s ease, opacity .3s ease;
             transform: rotate(0deg);
@@ -59,12 +90,28 @@
             transform: rotate(45deg);
             opacity: 0;
         }
-
+/*I couldn't get .cardLeft to work properly due to the alternations between classes */
         .cardLeft {
             transition: transform .3s ease, opacity .3s ease;
-            transform: rotate(-45deg);
+            transform: rotate(-20deg);
             opacity: 1;
         }
+        .schoolCardActive {
+            transition: transform .3s ease, opacity .3s ease;
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+
+        .schoolCardOut {
+            transition: transform .3s ease, opacity .3s ease;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+/*Same thing as above, I couldn't get the animation for .schoolCardLeft to work */
+        .schoolCardLeft {
+            transition: transform .3s ease, opacity .3s ease;
+            transform: rotate(-20deg);
+            opacity: 1;
         }
     </style>
 </head>
@@ -72,9 +119,16 @@
     
     <div id="app">
         <student-card v-bind:student="currentStudent" v-bind:isactive="cardActive"></student-card>
-        <!--v-on:click="leftArrow" goes on line 69-->
-        <div class="leftArrow"> < </div>
-        <div class="arrow" v-on:click="arrowClicked"> > </div>
+        <div class="leftArrow" v-on:click="leftArrow"> < </div>
+        <div class="schoolArrow" v-on:click="arrowClicked"> > </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="schoolapp">
+        <school-card v-bind:school="currentSchool" v-bind:isactive="schoolCardActive"></school-card>
+        <div class="schoolLeftArrow" v-on:click="schoolLeftArrow"> < </div>
+        <div class="schoolArrow" v-on:click="schoolArrowClicked"> > </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
