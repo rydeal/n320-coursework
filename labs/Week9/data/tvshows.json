@@ -1,0 +1,79 @@
+{
+    "meta": {
+        "type": "top six"
+    },
+    "tvshows": [
+        { 
+            "name": "Game of Thrones", 
+            "rating": "good", 
+            "ending": "bad", 
+            "genre": "fantasy", 
+            "seasons": 8, 
+            "network": "HBO", 
+            "male lead": false,
+            "season finale titles": [
+                "Fire and Blood", "Valar Morghulis", "Mhysa", "The Children", "Mother's Mercy", "The Winds of Winter", "The Dragon and the Wolf", "The Iron Throne"
+            ] 
+        },
+        { 
+            "name": "Stranger Things", 
+            "rating": "good", 
+            "ending": "n/a", 
+            "genre": "sci-fi", 
+            "seasons": 3, 
+            "network": "Netflix", 
+            "male lead": false,
+            "season finale titles": [
+                "The Upside Down", "The Gate", "The Battle of Starcourt"
+            ] 
+        },
+        { 
+            "name": "Boardwalk Empire", 
+            "rating": "good", 
+            "ending": "good", 
+            "genre": "historical", 
+            "seasons": 5, 
+            "network": "HBO", 
+            "male lead": true,
+            "season finale titles": [
+                "A Return to Normalcy", "To the Lost", "Margate Sands", "Farewell Daddy Blues", "Eldorado"
+            ] 
+        },
+        { 
+            "name": "Walking Dead", 
+            "rating": "mediocre", 
+            "ending": "n/a", 
+            "genre": "survival", 
+            "seasons": 10, 
+            "network": "AMC", 
+            "male lead": false,
+            "season finale titles": [
+                "TS-19", "Besides the Dying Fire", "Welcome to the Tombs", "A", "Conquer", "Last Day on Earth", "The First Day of the Rest of Your Life", "Wrath", "The Storm", "The World Before"
+            ] 
+        },
+        { 
+            "name": "Dexter", 
+            "rating": "good", 
+            "ending": "bad", 
+            "genre": "crime", 
+            "seasons": 8, 
+            "network": "CBS",  
+            "male lead": true,
+            "season finale titles": [
+                "Born Free", "The British Invasion", "Do You Take Dexter Morgan", "The Getaway", "The Big One", "This Is the Way the World Ends", "Surprise, Motherfucker!", "Remember the Monsters?"
+            ]
+        },
+        { 
+            "name": "Breaking Bad", 
+            "rating": "good", 
+            "ending": "good", 
+            "genre": "crime", 
+            "seasons": 5, 
+            "network": "AMC",  
+            "male lead": true,
+            "season finale titles": [
+                "A No-Rough-Stuff-Type Deal", "ABQ", "Full Measure", "Face Off", "Felina"
+            ] 
+        }
+    ]
+}
