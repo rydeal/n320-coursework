@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Board Game Solo Project - Ryan Deal</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div id="app">
+        <div class="container">
+            <h1>Battleship</h1>
+            <h2>Click on the bottom board to have the game pre-set your ships</h2>
+        <div class="botBoard">
+            <div  class="row {p}" 
+                  v-for="(row, indexR) in grid_bot_visible" 
+                  v-bind:key="row">
+                <div class="cell"
+                     v-for="(item, indexC) in row"
+                     v-bind:key="item"
+                     v-on:click="shootMissile(indexR, indexC)">
+                     {{ item }}
+                </div>
+            </div>
+        </div>
+        <div id="finmsg">
+            <div v-if="gameOver" class="gover">Game Over</div>
+            <!--Different messages depending on what variable becomes true-->
+            <div v-if="winner1">You won Battleship!</div>
+            <div v-if="winner2">The bot has won Battleship!</div>
+        </div>
+        <!--This setup was taken from the Connect Four lab to make it easier to flesh out the grid quickly-->
+        <div class="playerBoard">
+            <div  class="row {p}" 
+                  v-for="(row, indexR) in grid_player" 
+                  v-bind:key="row">
+                <div class="cell"
+                     v-for="(item, indexC) in row"
+                     v-bind:key="item"
+                     v-on:click="beginGame()">
+                     {{ item }}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

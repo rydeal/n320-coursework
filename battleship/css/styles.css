@@ -1,0 +1,44 @@
+body {
+    background-color: #006994;
+    font-size: 12px;
+}
+
+#app {
+    background-color: #00ff00;
+}
+
+.row {
+    display: flex;
+}
+.cell {
+    width: 15px;
+    height: 15px;
+    margin: 3px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.botBoard {
+    margin-bottom: 50px;
+    margin-left: 550px;
+}
+
+.playerBoard {
+    margin-left: 550px;
+}
+
+.container {
+    width: 1280px;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 80px;
+    font-size: 25px;
+}
+
+h2 {
+    text-align: center;
+    margin-left: 80px;
+    font-size: 10px;
+}

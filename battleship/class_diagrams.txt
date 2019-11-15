@@ -1,0 +1,23 @@
+placeShip() :
+initially place the ships of the robot randomly
+have a check that will make sure the pieces don't go outside of the grid
+either have the player pieces predetermined or able to be chosen (if time)
+
+shootMissile():
+have a hidden grid with what the robot has for their pieces and a visible grid that the player will click on, having misses and hits animated accordingly
+the robot would also do this but completely randomly or have a way to be "smarter" and start looking around the area when finding a hit at random (if time)
+
+checkGame():
+check how many ships are left and if there are none on one of the boards the game ends
+constant checks after each shot
+
+checkShip(): 
+check and make sure all ships are actually on the boards
+maybe use if statements or a for loop?
+
+beginGame():
+starts the actual game up once the pieces are set
+maybe after checkShip() returns true?
+
+wireframe here:
+https://wireframe.cc/EVleoi
